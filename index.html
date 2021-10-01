@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Taller Practico 2</title>
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body>
+    <section class="encabezado">
+      <h1>Restaurante</h1>
+    </section>
+    <section class="formulario">
+      <div class="productos">
+        <form action="javascript:void(0);" class="demoForm" id="productosForm">
+          <fieldset>
+            <legend>Crea tu combo</legend>
+            <p>Piezas de Pollo:
+              <label id="pequeñaP"><input type="radio" id="pP" name="size" value="1.25" checked="checked"/>Pequeña</label>
+              <label id="medianoP"><input type="radio" id="mP" name="size" value="1.50" />Mediana</label>
+              <label id="grandeP"><input type="radio" id="gP" name="size" value="1.75" />Gigante</label>
+              <label><input type="number" id="cantPollo" name="cantPollo" value="1">Cantidad</label>
+              <input type="hidden" name="sz_tot" value="0.00" />
+            </p>
+            <p>Bebida:
+              <label id="pequeñaS"><input type="radio" id="pB"  name="bebida" value="1.00" checked="checked"/>Pequeña</label>
+              <label id="medianaS"><input type="radio" id="mB"  name="bebida" value="1.25" />Mediana</label>
+              <label id="grandeS"><input type="radio" id="gB"  name="bebida" value="1.50" />Gigante</label>
+              <label><input type="number" id="cantBebida" name="cantBebida" value="1">Cantidad</label>
+              <input type="hidden" name="bebida_tot" value="0.00" />
+            </p>
+            <p id="extras"><label>Productos:</label>
+              <label id="Ensalada"><input type="checkbox" id="ensalada" name="ensalada" value="1.50" />Ensalada</label>
+              <label id="Papas"><input type="checkbox" id="papa" name="papa" value="1.25" />Papa Frita</label>
+              <label id="Cafe"><input type="checkbox" id="cafe" name="cafe" value="0.50" />Café</label>
+              <label id="Postre"><input type="checkbox" id="postre" name="postre" value="1.25" />Postre</label>
+              <input type="hidden" name="ex_tot" value="0.00" />
+            </p>
+            <p>
+              <label>Total: $<input type="text" id="total" name="total" class="num" value="0.00" readonly="readonly" /></label>
+            </p>
+            <p>
+              <input id="en" type="submit" name="submit" value="Submit" />
+            </p>
+          </fieldset>
+        </form>
+      </div>
+      <div class="menus">
+        <h1>Menus</h1>
+        <form class="" action="javascript:void(0);" id="combosForm">
+          <input id="menu1" type="submit"  name="menu" value="Super Combo">
+          <input id="menu2" type="submit"  name="menu" value="Combo Personal">
+          <input id="menu3" type="submit"  name="menu" value="Combo infantil">
+        </form>
+      </div>
+    </section>
+    <section class="respuesta">
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Menu</th>
+            <th>Precio</th>
+            <th>Productos</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tbody id="box">
+
+        </tbody>
+      </table>
+      <section>
+            <article>
+                <div id="wrap">
+                    <h1>Déjanos tus comentarios</h1>
+                <div id='form_wrap'>
+                <form id="contact-form" action="javascript:alert('¡Comentario enviado!');">
+                    <p id="formstatus"></p>
+                    <p>
+                        Instrucciones: CTRL+E para Editar y CTRL+S para Guardar,
+                        ESC para Cancelar.
+                    </p>
+                     <label for="email">Tu mensaje: </label>
+                        <div id="view"></div>
+                    <textarea name="message" id="area" value="Tu mensaje" id="message" ></textarea>
+                    <input type="submit" name ="submit" value="Enviar" />
+                </form>
+                </div>
+                </div>
+                <div id="fact"></div>
+            </article>
+        </section>
+    </section>
+  </body>
+  <script src="index.js"></script>
+</html>
